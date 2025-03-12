@@ -8,32 +8,47 @@
     <meta name="keywords" content="Monster Survivors, survival game, roguelike game, online game, action game">
     <link rel="canonical" href="https://monstersurvivors.space">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .game-gradient {
-            background: linear-gradient(to bottom, #1a1a1a, #000000);
-        }
-        .content-gradient {
-            background: linear-gradient(120deg, #f8fafc, #f1f5f9);
-        }
-        .game-container {
-            box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
-            aspect-ratio: 16/9;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
-<body class="min-h-screen content-gradient text-gray-900">
-    <div class="max-w-6xl mx-auto px-4 py-8">
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Monster Survivors</h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-6">Survive endless waves of monsters in this thrilling roguelike adventure!</p>
-        </header>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 flex flex-col">
+    <!-- Header -->
+    <header class="bg-[#1a1f2e] shadow-lg">
+        <nav class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-blue-400">
+                    Monster Survivors
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#play-section" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                        Play Now
+                    </a>
+                    <a href="#overview-section" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                        Overview
+                    </a>
+                    <a href="#features-section" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                        Features
+                    </a>
+                    <a href="#guide-section" class="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                        How to Play
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-4 py-8">
         <!-- Game Section -->
-        <main class="mb-16">
-            <div class="game-gradient p-4 md:p-8 rounded-2xl shadow-2xl game-container">
+        <section id="play-section" class="mb-16 scroll-mt-8">
+            <h1 class="text-center mb-8">
+                <span class="text-4xl md:text-5xl font-bold block mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 drop-shadow-lg hover:scale-105 transform transition-transform duration-300">
+                    Monster Survivors
+                </span>
+                <span class="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                    Survive endless waves of monsters in this thrilling roguelike adventure!
+                </span>
+            </h1>
+            
+            <div class="bg-gradient-to-b from-gray-900 to-black p-4 md:p-8 rounded-2xl shadow-2xl max-w-[1000px] mx-auto aspect-video">
                 <div class="relative w-full h-full rounded-lg overflow-hidden border-4 border-gray-800">
                     <iframe 
                         src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
@@ -43,52 +58,116 @@
                     </iframe>
                 </div>
             </div>
-            
-            <!-- Game Controls Info -->
-            <!-- <div class="text-center mt-4 text-sm text-gray-600">
-                <p>💡 Tip: Click the game area to focus. Press ESC to pause.</p>
-            </div> -->
-        </main>
+        </section>
 
         <!-- Game Info Section -->
-        <section class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h2 class="text-2xl font-bold mb-4 text-gray-900 border-b-2 border-blue-500 pb-2">Game Overview</h2>
-                <p class="text-gray-700 mb-6">Monster Survivors is an intense survival roguelike where your skills and strategy determine how long you can last. Face increasingly difficult waves of monsters while collecting power-ups and becoming stronger.</p>
-                
-                <h2 class="text-2xl font-bold mb-4 text-gray-900 border-b-2 border-blue-500 pb-2">How to Play</h2>
-                <p class="text-gray-700 mb-6">Use WASD or arrow keys to move your character. Automatically attack nearby enemies and collect experience orbs to level up. Choose new abilities and upgrades as you progress to create powerful combinations.</p>
+        <section class="space-y-8">
+            <!-- Game Overview -->
+            <div id="overview-section" class="relative p-[1px] rounded-xl hover:shadow-[0_10px_50px_-12px_rgba(59,130,246,0.5)] transition-all duration-300 scroll-mt-16 group backdrop-blur-sm">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-xl opacity-50 group-hover:opacity-70 transition-all duration-300 blur-[0.5px]"></div>
+                <div class="relative bg-white/80 backdrop-blur-sm rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600">
+                        Game Overview
+                    </h2>
+                    <p class="text-gray-700/90 leading-relaxed">
+                        Monster Survivors is an <span class="text-blue-600/90 font-medium">intense survival roguelike</span> where your skills and strategy determine how long you can last. Face <span class="text-blue-600/90 font-medium">increasingly difficult waves</span> of monsters while collecting <span class="text-blue-600/90 font-medium">power-ups</span> and becoming stronger.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                <h2 class="text-2xl font-bold mb-4 text-gray-900 border-b-2 border-blue-500 pb-2">Key Features</h2>
-                <ul class="list-none text-gray-700 space-y-3">
-                    <li class="flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Roguelike progression system
-                    </li>
-                    <li class="flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Multiple character abilities and upgrades
-                    </li>
-                    <li class="flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Endless waves of challenging monsters
-                    </li>
-                    <li class="flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Dynamic difficulty scaling
-                    </li>
-                    <li class="flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Unique power-up combinations
-                    </li>
-                </ul>
+            <!-- How to Play -->
+            <div id="guide-section" class="relative p-[1px] rounded-xl hover:shadow-[0_10px_50px_-12px_rgba(147,51,234,0.5)] transition-all duration-300 scroll-mt-16 group backdrop-blur-sm">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-purple-600/20 rounded-xl opacity-50 group-hover:opacity-70 transition-all duration-300 blur-[0.5px]"></div>
+                <div class="relative bg-white/80 backdrop-blur-sm rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-600">
+                        How to Play
+                    </h2>
+                    <p class="text-gray-700/90 leading-relaxed">
+                        Use <span class="text-purple-600/90 font-medium">WASD or arrow keys</span> to move your character. <span class="text-purple-600/90 font-medium">Automatically attack</span> nearby enemies and collect <span class="text-purple-600/90 font-medium">experience orbs</span> to level up. Choose <span class="text-purple-600/90 font-medium">new abilities and upgrades</span> as you progress to create powerful combinations.
+                    </p>
+                </div>
+            </div>
 
-                <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900 border-b-2 border-blue-500 pb-2">Tips for Success</h2>
-                <p class="text-gray-700">Keep moving to avoid being surrounded. Focus on a consistent build strategy when choosing upgrades. Prioritize experience collection to stay ahead of the difficulty curve.</p>
+            <!-- Key Features -->
+            <div id="features-section" class="relative p-[1px] rounded-xl hover:shadow-[0_10px_50px_-12px_rgba(6,182,212,0.5)] transition-all duration-300 scroll-mt-16 group backdrop-blur-sm">
+                <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 rounded-xl opacity-50 group-hover:opacity-70 transition-all duration-300 blur-[0.5px]"></div>
+                <div class="relative bg-white/80 backdrop-blur-sm rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-600">
+                        Key Features
+                    </h2>
+                    
+                    <!-- Features Grid -->
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Column 1 -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3 group/item">
+                                <span class="w-2 h-2 bg-gradient-to-r from-cyan-500/50 to-cyan-600/50 rounded-full mt-2 group-hover/item:from-cyan-500 group-hover/item:to-cyan-600 transition-colors duration-300"></span>
+                                <p class="text-gray-700/90">
+                                    <span class="text-cyan-600/90 font-medium">Roguelike progression system</span> with permanent upgrades
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3 group/item">
+                                <span class="w-2 h-2 bg-gradient-to-r from-cyan-500/50 to-cyan-600/50 rounded-full mt-2 group-hover/item:from-cyan-500 group-hover/item:to-cyan-600 transition-colors duration-300"></span>
+                                <p class="text-gray-700/90">
+                                    <span class="text-cyan-600/90 font-medium">Multiple character abilities</span> and upgrade combinations
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3 group/item">
+                                <span class="w-2 h-2 bg-gradient-to-r from-cyan-500/50 to-cyan-600/50 rounded-full mt-2 group-hover/item:from-cyan-500 group-hover/item:to-cyan-600 transition-colors duration-300"></span>
+                                <p class="text-gray-700/90">
+                                    <span class="text-cyan-600/90 font-medium">Endless waves</span> of challenging monsters
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2 -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3 group/item">
+                                <span class="w-2 h-2 bg-gradient-to-r from-cyan-500/50 to-cyan-600/50 rounded-full mt-2 group-hover/item:from-cyan-500 group-hover/item:to-cyan-600 transition-colors duration-300"></span>
+                                <p class="text-gray-700/90">
+                                    <span class="text-cyan-600/90 font-medium">Dynamic difficulty scaling</span> based on progress
+                                </p>
+                            </div>
+                            <div class="flex items-start space-x-3 group/item">
+                                <span class="w-2 h-2 bg-gradient-to-r from-cyan-500/50 to-cyan-600/50 rounded-full mt-2 group-hover/item:from-cyan-500 group-hover/item:to-cyan-600 transition-colors duration-300"></span>
+                                <p class="text-gray-700/90">
+                                    <span class="text-cyan-600/90 font-medium">Unique power-up combinations</span> for varied gameplay
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips for Success -->
+            <div class="relative p-[1px] rounded-xl hover:shadow-[0_10px_50px_-12px_rgba(16,185,129,0.5)] transition-all duration-300 scroll-mt-16 group backdrop-blur-sm">
+                <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 rounded-xl opacity-50 group-hover:opacity-70 transition-all duration-300 blur-[0.5px]"></div>
+                <div class="relative bg-white/80 backdrop-blur-sm rounded-xl p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-600">
+                        Tips for Success
+                    </h2>
+                    <p class="text-gray-700/90 leading-relaxed">
+                        <span class="text-emerald-600/90 font-medium">Keep moving</span> to avoid being surrounded. Focus on a <span class="text-emerald-600/90 font-medium">consistent build strategy</span> when choosing upgrades. <span class="text-emerald-600/90 font-medium">Prioritize experience collection</span> to stay ahead of the difficulty curve.
+                    </p>
+                </div>
             </div>
         </section>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div class="flex space-x-6 text-sm">
+                    <a href="#" class="hover:text-white transition-colors duration-200">Privacy Policy</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Terms of Service</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Contact Us</a>
+                </div>
+                <p class="text-sm">© 2024 Monster Survivors. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 
